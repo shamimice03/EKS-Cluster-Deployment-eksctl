@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: kubehub-cluster-01
+  region: ap-northeast-1
+  version: "1.22"
+managedNodeGroups:
+  - name: managed-ng-1
+    instanceType: t2.micro
+    minSize: 2
+    maxSize: 20
+    desiredCapacity: 2
+    volumeSize: 10
+    volumeType: gp2
+    ssh:
+      allow: true
+      publicKeyPath: ec2-access
