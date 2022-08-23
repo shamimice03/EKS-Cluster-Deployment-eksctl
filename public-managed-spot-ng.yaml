@@ -25,3 +25,6 @@ managedNodeGroups:
   ssh:
     allow: true
     publicKeyPath: ec2-access
+
+
+#Though it is a public node group, nat gateway is not needed.
